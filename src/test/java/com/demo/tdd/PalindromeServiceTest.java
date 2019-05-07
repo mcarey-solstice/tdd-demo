@@ -40,4 +40,9 @@ public class PalindromeServiceTest {
         assertTrue(service.isPalindrome("a but tuba."));
     }
 
+    @Test
+    public void upperCaseCharactersAreConverted() {
+        assertTrue(service.isPalindrome("A but tUba"));
+    }
+
 }
