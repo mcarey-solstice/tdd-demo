@@ -13,4 +13,14 @@ public class PalindromeServiceTest {
         assertTrue(service.isPalindrome(""));
     }
 
+    @Test
+    public void singleCharacterIsPalindrome() throws Exception {
+        assertTrue(service.isPalindrome("a"));
+    }
+
+    @Test
+    public void twoDifferentCharactersIsNotPalindrome() throws Exception {
+        assertFalse(service.isPalindrome("ab"));
+    }
+
 }
