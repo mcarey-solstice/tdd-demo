@@ -8,4 +8,9 @@ public class PalindromeServiceTest {
 
     PalindromeService service = new PalindromeService();
 
+    @Test
+    public void emptyStringIsPalindrome() throws Exception {
+        assertTrue(service.isPalindrome(""));
+    }
+
 }
