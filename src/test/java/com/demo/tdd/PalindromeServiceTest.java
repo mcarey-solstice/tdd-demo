@@ -28,4 +28,9 @@ public class PalindromeServiceTest {
         assertTrue(service.isPalindrome("aba"));
     }
 
+    @Test
+    public void firstAndLastCharacterSameDoesNotImplyPalindrome() throws Exception {
+        assertFalse(service.isPalindrome("abca"));
+    }
+
 }
