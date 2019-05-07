@@ -7,7 +7,7 @@ public class PalindromeService {
             return true;
         }
 
-        return false;
+        return subject.charAt(0) == subject.charAt(subject.length() - 1);
     }
 
 }

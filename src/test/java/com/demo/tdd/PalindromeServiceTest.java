@@ -23,4 +23,9 @@ public class PalindromeServiceTest {
         assertFalse(service.isPalindrome("ab"));
     }
 
+    @Test
+    public void oneMiddleCharacterIsPalindrome() throws Exception {
+        assertTrue(service.isPalindrome("aba"));
+    }
+
 }
