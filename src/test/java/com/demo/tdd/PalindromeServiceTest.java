@@ -33,4 +33,11 @@ public class PalindromeServiceTest {
         assertFalse(service.isPalindrome("abca"));
     }
 
+    @Test
+    public void nonAlphaCharactersAreIgnored() throws Exception {
+        assertTrue(service.isPalindrome("a but tuba"));
+        assertTrue(service.isPalindrome("a but tuba?"));
+        assertTrue(service.isPalindrome("a but tuba."));
+    }
+
 }
