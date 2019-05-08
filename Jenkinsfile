@@ -2,17 +2,19 @@
  * Configures Jenkins
  */
 
-node {
+pipeline {
+    agent any
 
-    stage('Clone repo') {
-        git url: 'https://github.com/mcarey-solstice/tdd-demo', branch: 'demo'
-    }
-
-    stage('Build and test') {
-        steps {
-            echo 'Running gradle test'
-            gradle('test')
+    stages {
+        stage('Clone repo') {
+            steps {
+                git url: 'https://github.com/mcarey-solstice/tdd-demo', branch: 'demo'
+            }
+        }
+        stage('Build and test') {
+            steps {
+                gradle 'test'
+            }
         }
     }
-
 }
