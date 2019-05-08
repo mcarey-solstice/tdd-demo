@@ -6,8 +6,10 @@ node {
 
     stage('Clone repo') {
         git url: 'https://github.com/mcarey-solstice/tdd-demo', branch: 'demo'
+    }
 
-        sh 'ls'
+    stage('Build and test') {
+        gradle 'test'
     }
 
 }
