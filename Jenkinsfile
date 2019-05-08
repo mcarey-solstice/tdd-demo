@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build and test') {
             steps {
-                gradle tasks: ['test']
+                sh './gradlew test'
             }
         }
     }
