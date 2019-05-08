@@ -3,5 +3,7 @@
  */
 
 job('Build and test') {
-    gradle 'test'
+    steps {
+        gradle 'test'
+    }
 }
