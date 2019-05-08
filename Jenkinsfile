@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Build and test') {
             steps {
-                gradle task: 'test'
+                gradle tasks: 'test'
             }
         }
     }
