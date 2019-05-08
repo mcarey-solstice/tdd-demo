@@ -9,7 +9,8 @@ node {
     }
 
     stage('Build and test') {
-        gradle 'test'
+        echo 'Running gradle test'
+        gradle('test')
     }
 
 }
