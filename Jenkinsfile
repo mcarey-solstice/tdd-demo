@@ -4,7 +4,7 @@
 
 node {
     stage('Clone repo') {
-        git 'https://github.com/mcarey-solstice/tdd-demo', 'demo'
+        git url: 'https://github.com/mcarey-solstice/tdd-demo', branch: 'demo'
 
         sh 'ls'
     }
